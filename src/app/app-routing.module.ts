@@ -13,6 +13,10 @@ const routes: Routes = [
     path: 'about-me',
     loadChildren: () => import('./about-me/about-me.module').then(m => m.AboutMeModule),
   },
+  {
+    path: 'proyects',
+    loadChildren: () => import('./proyects/proyects.module').then(m => m.ProyectsModule),
+  },
   { path: '**', redirectTo: '' },
 ]
 
