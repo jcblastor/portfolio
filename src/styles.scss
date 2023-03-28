@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+@use './assets/sass/normalize';
+
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Inter'),
+      local('Inter-Regular'),
+      url('./assets/fonts/Inter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  src: local('Inter'),
+      local('Inter-Bold'),
+      url('./assets/fonts/Inter-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+* {
+  --primary: #FFC448;
+  --secondary: #7AB5FB;
+  --lightGray: #F9F8F4;
+  --darkBlue: #222937;
+  --shadowBlue: #22293780;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background-color: var(--lightGray);
+}
