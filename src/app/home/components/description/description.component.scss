@@ -1,0 +1,41 @@
+.description {
+
+  &__saludo {
+    background-color: var(--primary);
+    padding: 3px 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  &__sub-title {
+    margin-top: 15px;
+    font-size: 0.8rem;
+  }
+
+  &__title {
+    font-weight: 700;
+  }
+
+  &__profession {
+    font-size: 0.8rem;
+  }
+
+  @media (min-width: 425px) {
+
+    &__saludo {
+      font-size: 1.2rem;
+    }
+
+    &__sub-title {
+      font-size: 1rem;
+    }
+
+    &__title {
+      font-size: 1.7rem;
+    }
+
+    &__profession {
+      font-size: 1rem;
+    }
+  }
+}
