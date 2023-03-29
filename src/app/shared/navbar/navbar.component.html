@@ -1,0 +1,55 @@
+<nav class="nav">
+  <ul>
+    <!-- icon home -->
+    <li
+      class="nav__list"
+      routerLink=""
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true}"
+    >
+      <span class="nav__list--icon">
+        <i class="fa-solid fa-house"></i>
+      </span>
+      <span class="nav__list--text">Inicio</span>
+    </li>
+
+    <!-- icon about-me -->
+    <li
+      class="nav__list"
+      routerLink="about-me/profile"
+      routerLinkActive="active"
+    >
+      <span class="nav__list--icon">
+        <i class="fa-solid fa-user-tie"></i>
+      </span>
+      <span class="nav__list--text">Sobre mí</span>
+    </li>
+
+    <!-- icon proyects -->
+    <li
+      class="nav__list"
+      routerLink="proyects/list"
+      routerLinkActive="active"
+    >
+      <span class="nav__list--icon">
+        <i class="fa-solid fa-images"></i>
+      </span>
+      <span class="nav__list--text">Proyectos</span>
+    </li>
+
+    <!-- icon contact-me -->
+    <li
+      class="nav__list"
+      routerLink="about-me/contact-me"
+      routerLinkActive="active"
+    >
+      <span class="nav__list--icon">
+        <i class="fa-solid fa-envelopes-bulk"></i>
+      </span>
+      <span class="nav__list--text">Contáctame</span>
+    </li>
+
+    <div *ngIf="isMenuOption" class="nav__indication"></div>
+
+  </ul>
+</nav>

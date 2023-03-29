@@ -1,0 +1,14 @@
+.navbar {
+
+  position: fixed;
+  top: calc(100vh - 80px);
+  left: calc(50% - 150px);
+
+  @media (min-width: 425px) {
+    left: calc(50% - 200px);
+  }
+
+  @media (min-width: 1024px) {
+    top: 20px;
+  }
+}

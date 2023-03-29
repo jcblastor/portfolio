@@ -1,0 +1,211 @@
+.nav {
+  position: relative;
+  width: 300px;
+  height: 60px;
+  background-color: var(--lightGray);
+  border-radius: 8px;
+  border: 5px solid var(--darkBlue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    width: 270px;
+
+    .nav__list {
+      position: relative;
+      list-style: none;
+      width: 60px;
+      height: 60px;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+
+      &--icon {
+        position: relative;
+        display: block;
+        line-height: 75px;
+        font-size: 1.5rem;
+        text-align: center;
+        transition: 0.5s;
+        color: var(--darkBlue);
+      }
+
+      &--text {
+        position: absolute;
+        color: var(--darkBlue);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        transition: 0.5s;
+        opacity: 0;
+        transform: translateY(30px);
+      }
+    }
+
+    .nav__list.active .nav__list--icon {
+      transform: translateY(-30px);
+    }
+
+    .nav__list.active .nav__list--text {
+      opacity: 1;
+      transform: translateY(10px);
+    }
+
+    .nav__indication {
+      position: absolute;
+      top: -35px;
+      width: 60px;
+      height: 60px;
+      background-color: var(--primary);
+      border-radius: 50%;
+      border: 5px solid var(--darkBlue);
+      transition: 0.5s;
+    }
+
+    .nav__indication::before {
+      content: '';
+      position: absolute;
+      top: 60.9%;
+      left: -15px;
+      width: 15px;
+      height: 15px;
+      background-color: transparent;
+      border-top-right-radius: 20px;
+      box-shadow: 0px -5px 0 0 var(--darkBlue);
+    }
+
+    .nav__indication::after {
+      content: '';
+      position: absolute;
+      top: 60.9%;
+      right: -15px;
+      width: 15px;
+      height: 15px;
+      background-color: transparent;
+      border-top-left-radius: 20px;
+      box-shadow: 0px -5px 0 0 var(--darkBlue);
+    }
+  }
+
+  @media (min-width: 425px) {
+    width: 400px;
+    height: 70px;
+    border-radius: 15px;
+
+    ul {
+      width: 350px;
+
+      .nav__list {
+        width: 70px;
+        height: 70px;
+
+        &--text {
+          font-size: 0.9rem;
+        }
+      }
+
+      .nav__list.active .nav__list--icon {
+        transform: translateY(-35px);
+      }
+
+      .nav__list.active .nav__list--text {
+        opacity: 1;
+        transform: translateY(14px);
+      }
+
+      .nav__indication {
+        top: -40px;
+        width: 70px;
+        height: 70px;
+      }
+
+      .nav__indication::before {
+        top: 60%;
+        left: -18px;
+        width: 20px;
+        height: 20px;
+      }
+
+      .nav__indication::after {
+        top: 59%;
+        right: -19px;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+
+    ul {
+      .nav__list {
+        &--text {
+          transform: translateY(-30px);
+        }
+      }
+
+      .nav__list.active .nav__list--icon {
+        transform: translateY(35px);
+      }
+
+      .nav__list.active .nav__list--text {
+        opacity: 1;
+        transform: translateY(-14px);
+      }
+
+      .nav__indication {
+        top: 30px;
+      }
+
+      .nav__indication::before {
+        top: 50%;
+        left: -20px;
+      }
+
+      .nav__indication::after {
+        top: 50%;
+        right: -20px;
+      }
+    }
+  }
+}
+
+.nav ul {
+  .nav__list:nth-child(1).active ~ .nav__indication {
+    transform: translateX(calc(70px * 0));
+  }
+
+  .nav__list:nth-child(2).active ~ .nav__indication {
+    transform: translateX(calc(70px * 1));
+  }
+
+  .nav__list:nth-child(3).active ~ .nav__indication {
+    transform: translateX(calc(70px * 2));
+  }
+  .nav__list:nth-child(4).active ~ .nav__indication {
+    transform: translateX(calc(70px * 3));
+  }
+
+  @media (min-width: 425px) {
+    .nav__list:nth-child(1).active ~ .nav__indication {
+      transform: translateX(calc(93px * 0));
+    }
+
+    .nav__list:nth-child(2).active ~ .nav__indication {
+      transform: translateX(calc(93px * 1));
+    }
+
+    .nav__list:nth-child(3).active ~ .nav__indication {
+      transform: translateX(calc(93px * 2));
+    }
+    .nav__list:nth-child(4).active ~ .nav__indication {
+      transform: translateX(calc(93px * 3));
+    }
+  }
+}
