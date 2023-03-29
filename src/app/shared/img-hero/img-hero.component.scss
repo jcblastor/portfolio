@@ -1,0 +1,39 @@
+.hero__img {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  background-image: url('../../../assets/images/Me.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right top;
+  width: 55%;
+  min-height: 200px;
+
+  @media (min-width: 375px) {
+    top: 60px;
+    background-position: right 20% top;
+    min-height: 210px;
+  }
+
+  @media (min-width: 375px) {
+    min-height: 220px;
+  }
+
+  @media (min-width: 425px) {
+    top: 70px;
+  }
+
+  @media (min-width: 580px) {
+    width: 40%;
+    top: 80px;
+    right: 10%;
+    min-height: 250px;
+  }
+
+  @media (min-width: 768px) {
+    width: 40%;
+    top: 100px;
+    right: 7%;
+    min-height: 270px;
+  }
+}
