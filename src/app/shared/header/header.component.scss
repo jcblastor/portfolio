@@ -1,0 +1,77 @@
+.header {
+  width: 100%;
+  height: 125px;
+  background-image: url('../../../assets/images/M-header.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top left;
+
+  &__title {
+    color: white;
+    margin-left: 10px;
+    padding-top: 30px;
+  }
+
+  @media (min-width: 375px) {
+    background-size: cover;
+
+    &__title {
+      margin-left: 20px;
+    }
+  }
+
+  @media (min-width: 425px) {
+    background-image: url('../../../assets/images/T-header.svg');
+    background-position: top left -70px;
+  }
+
+  @media (min-width: 500px) {
+    background-position: top left;
+  }
+
+  @media (min-width: 580px) {
+    height: 140px;
+
+    &__title {
+      margin-left: 50px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    height: 180px;
+    background-position: top left;
+
+    &__title {
+      margin-left: 40px;
+      padding-top: 50px;
+      font-size: 2rem;
+    }
+  }
+
+  @media (min-width: 800px) {
+    background-image: url('../../../assets/images/D-header.svg');
+    background-size: contain;
+  }
+
+  @media (min-width: 1024px) {
+    background-image: url('../../../assets/images/D-header.svg');
+    background-size: cover;
+
+    &__title {
+      font-size: 2rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    height: 205px;
+
+    &__container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    &__title {
+      margin: 0;
+    }
+  }
+}
