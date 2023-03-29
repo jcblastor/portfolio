@@ -36,4 +36,9 @@
     right: 7%;
     min-height: 270px;
   }
+
+  @media (min-width: 1024px) {
+    right: 0;
+    left: 120px;
+  }
 }

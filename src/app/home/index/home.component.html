@@ -1,6 +1,21 @@
 <app-header title="Bienvenido!"></app-header>
 <app-img-hero></app-img-hero>
 
-<div class="hero__container">
-  <app-description></app-description>
+<div class="hero">
+
+  <div class="hero__description">
+    <app-description></app-description>
+
+    <div class="hero__description--contact">
+      <app-social-network *ngFor="let icon of socialNetwork" [icon]="icon">
+      </app-social-network>
+    </div>
+
+    <button
+    class="hero__description--button"
+    routerLink="about-me/profile"
+  >
+    Más sobre mí
+  </button>
+  </div>
 </div>
