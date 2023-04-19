@@ -38,4 +38,26 @@
       font-size: 1rem;
     }
   }
+
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__saludo {
+      font-size: 1.5rem;
+    }
+
+    &__sub-title {
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__profession {
+      font-size: 1.2rem;
+    }
+  }
 }

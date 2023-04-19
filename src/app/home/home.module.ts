@@ -6,11 +6,13 @@ import { DescriptionComponent } from "./components/description/description.compo
 
 import { HomeComponent } from "./index/home.component";
 import { RouterModule } from "@angular/router";
+import { CarouselComponent } from "./components/carousel/carousel.component";
 
 @NgModule({
   declarations: [
     HomeComponent,
     DescriptionComponent,
+    CarouselComponent,
   ],
   imports: [
     CommonModule,

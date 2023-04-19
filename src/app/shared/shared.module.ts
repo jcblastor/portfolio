@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { ImgHeroComponent } from "./img-hero/img-hero.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { SocialNetworkComponent } from "./social-network/social-network.component";
+import { TechComponent } from "./tech/tech.component";
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { SocialNetworkComponent } from "./social-network/social-network.componen
     NavbarComponent,
     ImgHeroComponent,
     SocialNetworkComponent,
+    TechComponent,
     FooterComponent,
   ],
   imports:[
@@ -25,6 +27,7 @@ import { SocialNetworkComponent } from "./social-network/social-network.componen
     NavbarComponent,
     ImgHeroComponent,
     SocialNetworkComponent,
+    TechComponent,
     FooterComponent,
   ],
 })

@@ -18,4 +18,22 @@
     Más sobre mí
   </button>
   </div>
+
+  <!-- segun el tamaño de la pantalla mostramos 3 o 4 en el carrusel -->
+  <div class="hero__container--carousel">
+    <div class="hero__carousel" *ngIf="cardsPerView === 4">
+      <h4 class="hero__carousel--title">Tengo conocimientos en:</h4>
+      <app-carousel
+        [cardsPerView]="cardsPerView"
+      ></app-carousel>
+    </div>
+
+    <div class="hero__carousel" *ngIf="cardsPerView === 3">
+      <h4 class="hero__carousel--title">Tengo conocimientos en:</h4>
+      <app-carousel
+        [cardsPerView]="cardsPerView"
+      ></app-carousel>
+    </div>
+  </div>
+
 </div>

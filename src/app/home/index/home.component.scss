@@ -16,6 +16,16 @@
       color: var(--lightGray);
       font-size: 0.8rem;
       margin-top: 10px;
+      cursor: pointer;
+    }
+  }
+
+  &__carousel {
+    margin-top: 10px;
+
+    &--title {
+      margin-bottom: 10px;
+      font-weight: 700;
     }
   }
 
@@ -39,9 +49,7 @@
   }
 
   @media (min-width: 580px) {
-    margin: 0 30px;
-    top: -40px;
-    padding-left: 50px;
+    margin: 0 60px;
 
     &__description {
 
@@ -49,14 +57,48 @@
         font-size: 1.2rem;
       }
     }
-  }
 
-  @media (min-width: 768px) {
-    padding-left: 60px;
+    .hero__carousel {
+
+      &--title {
+        font-size: 1.2rem;
+      }
+    }
+
   }
 
   @media (min-width: 1024px) {
+    display: flex;
+    justify-content: space-between;
     padding-left: 0;
     margin: 0 40px;
+
+    &__container--carousel {
+      width: 50%;
+
+      .hero__carousel {
+
+        &--title {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__description {
+
+      &--contact {
+        margin-top: 10px;
+      }
+
+      &--button {
+        font-size: 1.5rem;
+        margin-top: 20px;
+      }
+    }
   }
 }
