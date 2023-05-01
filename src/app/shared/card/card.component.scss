@@ -1,0 +1,179 @@
+.card {
+  background-color: #fff;
+  box-shadow: 2px 2px 5px  var(--shadowBlue);
+  overflow: hidden;
+  position: relative;
+
+  &__update {
+    position: absolute;
+    top: -1.7rem;
+    right: -3.9rem;
+    z-index: 1;
+    font-size: 1.2rem;
+
+    .icon--update {
+      border-top-left-radius: 0.7rem;
+      background-color: var(--primary);
+      color: var(--darkBlue);
+      cursor: pointer;
+      padding: 0.2rem 0.4rem;
+    }
+
+    .icon--delete {
+      @extend .icon--update;
+      border-top-left-radius: 0;
+      border-bottom-right-radius: 0.7rem;
+      background-color: var(--shadowBlue);
+      color: red;
+    }
+  }
+
+  &__image {
+    position: relative;
+    top: -0.45rem;
+    left: -2rem;
+    transform: rotateZ(4deg);
+
+    img {
+      width: 120%;
+      border-bottom-right-radius: 10px;
+    }
+  }
+
+  &__description {
+    padding: 0 0.5rem 0.5rem;
+
+    &--title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    &--content {
+      font-size: 0.7rem;
+      margin-bottom: 0.3rem;
+    }
+
+    &--subtitle {
+      font-weight: 700;
+      font-size: 0.8rem;
+      margin-bottom: 0.3rem;
+    }
+
+    &--tech {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      place-items: center;
+      margin-bottom: 0.5rem;
+
+      img {
+        width: 70%;
+      }
+    }
+
+    &--button {
+      display: grid;
+      place-items: center;
+
+      button {
+        background-color: var(--primary);
+        border: none;
+        cursor: pointer;
+        padding: 0.2rem 0 0.1rem;
+        font-size: 0.9rem;
+        width: 100%;
+      }
+    }
+  }
+
+  // hover imagen
+  &:hover .card__image {
+    transition: all 0.3s ease-in;
+    top: 0;
+    left: -1rem;
+    transform: rotateZ(0);
+
+    img {
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  &:hover .card__update {
+    top: 0;
+    right: 0;
+    transition: all 0.3s ease-in;
+  }
+
+  // media queries
+  @media (min-width: 375px) {
+
+    &__image {
+      top: -0.5rem;
+      left: -2.2rem;
+    }
+  }
+
+  @media (min-width: 425px) {
+    &__image {
+      top: -0.65rem;
+      left: -2.6rem;
+    }
+  }
+
+  @media (min-width: 580px) {
+    box-shadow: 3px 3px 8px  var(--shadowBlue);
+
+    &__image {
+      top: -0.7rem;
+      left: -3.05rem;
+    }
+
+    &__description {
+
+      &--title {
+        font-size: 0.9rem;
+      }
+
+      &--content {
+        font-size: 0.8rem;
+        margin-bottom: 0.5rem;
+      }
+
+      &--subtitle {
+        font-size: 0.9rem;
+      }
+
+      &--button {
+
+        button {
+          padding: 0.3rem 0 0.2rem;
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+
+    &__image {
+      left: -2.8rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+
+    &__image {
+      left: -3.05rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+
+    &__image {
+      top: -0.9rem;
+      left: -3.95rem;
+    }
+  }
+}
+
+

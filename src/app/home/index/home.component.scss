@@ -102,3 +102,55 @@
     }
   }
 }
+
+// sección proyectos
+.proyects {
+  margin: -25px 10px 0;
+
+  &__title {
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  .card__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  @media (min-width: 375px) {
+    margin: -15px 20px;
+  }
+
+  @media (min-width: 580px) {
+    margin: -15px 60px;
+
+    &__title {
+      font-size: 1.2rem;
+    }
+
+    .card__container {
+      gap: 20px;
+    }
+  }
+
+  @media (min-width: 768px) {
+
+    .card__container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    margin: -25px 40px;
+
+    .card__container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+    margin: -25px auto;
+  }
+}

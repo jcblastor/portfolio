@@ -8,6 +8,7 @@ import { ImgHeroComponent } from "./img-hero/img-hero.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { SocialNetworkComponent } from "./social-network/social-network.component";
 import { TechComponent } from "./tech/tech.component";
+import { CardComponent } from "./card/card.component";
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { TechComponent } from "./tech/tech.component";
     ImgHeroComponent,
     SocialNetworkComponent,
     TechComponent,
+    CardComponent,
     FooterComponent,
   ],
   imports:[
@@ -28,6 +30,7 @@ import { TechComponent } from "./tech/tech.component";
     ImgHeroComponent,
     SocialNetworkComponent,
     TechComponent,
+    CardComponent,
     FooterComponent,
   ],
 })
