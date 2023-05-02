@@ -1,3 +1,39 @@
+.image__container {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  width: 55%;
+
+  @media (min-width: 375px) {
+    top: 60px;
+  }
+
+  @media (min-width: 425px) {
+    top: 70px;
+  }
+
+  @media (min-width: 580px) {
+    width: 40%;
+    top: 80px;
+    right: 10%;
+  }
+
+  @media (min-width: 768px) {
+    width: 40%;
+    top: 100px;
+    right: 7%;
+  }
+
+  @media (min-width: 1024px) {
+    right: 0;
+    left: 120px;
+  }
+
+  @media (min-width: 1200px) {
+    top: 145px;
+  }
+}
+
 .hero {
   position: relative;
   margin: 0 10px;

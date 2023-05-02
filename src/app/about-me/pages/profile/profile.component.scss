@@ -1,0 +1,115 @@
+.profile {
+  margin: 0 10px;
+  font-size: 0.8rem;
+
+  &__space {
+    float: right;
+    width: 50%;
+    min-height: 120px;
+  }
+
+  @media (min-width: 375px) {
+    margin: 0 20px;
+
+    &__space {
+      width: 48%;
+      min-height: 150px;
+    }
+  }
+
+  @media (min-width: 580px) {
+    margin: 0 50px;
+    font-size: 0.9rem;
+
+    &__space {
+      width: 45%;
+      min-height: 190px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1rem;
+
+    &__space {
+      width: 40%;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    margin: 0 40px;
+
+    &__space {
+      width: 30%;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__space {
+      width: 30%;
+      min-height: 230px;
+    }
+  }
+}
+
+.image__container {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  width: 55%;
+
+  @media (min-width: 375px) {
+    top: 60px;
+  }
+
+  @media (min-width: 425px) {
+    top: 70px;
+  }
+
+  @media (min-width: 580px) {
+    width: 40%;
+    top: 80px;
+    right: 10%;
+  }
+
+  @media (min-width: 768px) {
+    width: 40%;
+    top: 100px;
+    right: 7%;
+  }
+
+  @media (min-width: 1024px) {
+    right: 30px;
+  }
+
+  @media (min-width: 1200px) {
+    top: 145px;
+    right: 40px;
+  }
+}
+
+.buttons__container {
+  margin: 0 10px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: 375px) {
+    margin: 0 20px;
+  }
+
+  @media (min-width: 580px) {
+    margin: 0 50px;
+    justify-content: space-around;
+  }
+
+  @media (min-width: 1024px) {
+    margin: 10px 40px 0;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
