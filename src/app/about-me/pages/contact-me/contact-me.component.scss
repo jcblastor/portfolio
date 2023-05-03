@@ -1,0 +1,31 @@
+.contact {
+  margin: 0 10px;
+
+  &__title--redes {
+    font-weight: 700;
+    margin-top: -1rem;
+  }
+
+  &__container--redes {
+    display: flex;
+  }
+
+  &__title--form {
+    font-weight: 700;
+    margin: 0.7rem 0 0;
+  }
+
+  @media (min-width: 375px) {
+    margin: 0 20px;
+
+    &__title--redes {
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: 580px) {
+    max-width: 40%;
+    margin: 0 auto;
+  }
+
+}

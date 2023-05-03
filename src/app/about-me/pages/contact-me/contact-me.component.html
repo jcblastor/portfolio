@@ -1,1 +1,17 @@
-<h2>Soy Contáctame</h2>
+<app-header title="Contáctame"></app-header>
+
+<section class="contact">
+  <h3 class="contact__title--redes">Por redes sociales:</h3>
+
+  <div class="contact__container--redes">
+    <app-social-network
+      *ngFor="let icon of socialNetwork"
+      [icon]="icon"
+    ></app-social-network>
+  </div>
+
+  <h3 class="contact__title--form">Formulario de contacto</h3>
+
+  <app-form></app-form>
+
+</section>

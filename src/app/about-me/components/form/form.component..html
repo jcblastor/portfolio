@@ -1,0 +1,63 @@
+<form
+  class="contact__form"
+  [formGroup]="myForm"
+  (ngSubmit)="guardar()"
+>
+
+  <div class="contact__form--input">
+    <input
+    type="text"
+    [class]="getClass('name')"
+    formControlName="name"
+    required
+    />
+    <label >Nombre</label>
+
+  </div>
+  <span
+    *ngIf="isValidField('name')"
+  >El nombre es requerido</span>
+
+  <div class="contact__form--input">
+    <input
+      type="text"
+      [class]="getClass('email')"
+      formControlName="email"
+      required
+    />
+    <label>Correo electronico</label>
+  </div>
+  <span
+    *ngIf="isValidField('email')"
+  >El Correo electronico es requerido</span>
+
+  <div class="contact__form--input">
+    <input
+      type="text"
+      [class]="getClass('link_boceto')"
+      formControlName="link_boceto"
+      required
+    />
+    <label>Link del boceto</label>
+  </div>
+  <span
+  *ngIf="isValidField('link_boceto')"
+  >Link del boceto es requerido</span>
+
+  <div class="contact__form--input">
+    <textarea
+    rows="5"
+    formControlName="description"
+    [class]="getClass('description')"
+    required
+    ></textarea>
+    <label>Descripción</label>
+  </div>
+  <span
+  *ngIf="isValidField('description')"
+  >La descripción es requerido</span>
+
+  <div class="contact__form--button">
+    <button type="submit" >Enviar</button>
+  </div>
+</form>
