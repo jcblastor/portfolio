@@ -1,0 +1,78 @@
+.form {
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+
+    &--input{
+      text-align: center;
+
+      span {
+        display: block;
+        margin-bottom: 0.2rem;
+        font-size: 0.8rem;
+        color: var(--shadowBlue);
+      }
+
+      input[type="radio"] {
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: var(--darkBlue);
+        border-radius: 1rem;
+        box-shadow: -2px -2px 5px rgba($color: #222937, $alpha: 0.1),
+                    2px 2px 5px rgba($color: #191e27, $alpha: 1),
+                    inset -2px -2px 5px rgba($color: #222937, $alpha: 0.1),
+                    inset 2px 2px 5px rgba($color: #191e27, $alpha: 0.8),
+                    0 0 0 2px #191e27;
+        cursor: pointer;
+        position: relative;
+        outline: none;
+        width: 4rem;
+        height: 1.6rem;
+        transition: 0.5s ease all;
+      }
+
+      input[type="radio"]:checked {
+        background-color: var(--primary);
+      }
+
+      input[type="radio"]::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2.8rem;
+        height: 1.6rem;
+        background: linear-gradient(to top, #222937, #4c576d);
+        border-radius: 1rem;
+        box-shadow: 0 0 0 1px #222937;
+        transform: scale(0.98, 0.96);
+        transition: 0.5s ease all;
+      }
+
+      input[type="radio"]:checked::before {
+        left: 1.2rem;
+      }
+
+      input[type="radio"]::after {
+        content: '';
+        position: absolute;
+        width: 0.4rem;
+        height: 0.4rem;
+        left: 1.8rem;
+        top: calc(50% - 0.2rem);
+        background-color: var(--darkBlue);
+        border-radius: 50%;
+        transition: 0.5s ease all;
+      }
+
+      input[type="radio"]:checked::after {
+        left: calc(1.2rem + 1.8rem);
+        background-color: var(--primary);
+        box-shadow: 0 0 5px var(--primary),
+                    0 0 15px var(--primary);
+      }
+    }
+  }
+}
