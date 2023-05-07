@@ -1,9 +1,80 @@
 .proyects {
   margin: 0 10px;
 
-  &__title {
-    float: right;
+  &__title--proyects {
     font-weight: 700;
-    margin-top: -1.8rem;
+    margin: 0.5rem 0;
+  }
+
+  &__container {
+
+    &--filters {
+
+      h3 {
+        float: right;
+        font-weight: 700;
+        margin-top: -1.8rem;
+      }
+    }
+
+    &--cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+
+  }
+
+  @media (min-width: 375px) {
+    margin: 0 20px;
+  }
+
+  @media (min-width: 580px) {
+    margin: 0 50px;
+
+    &__container {
+
+      &--cards {
+        gap: 20px;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    margin: 0 60px;
+
+    &__container {
+
+      &--cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    margin: 0 40px;
+
+    &__container {
+      &--filters {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+          float: left;
+          margin-top: 0.5rem;
+        }
+      }
+
+      &--cards {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+    margin: 0 auto;
+
   }
 }
