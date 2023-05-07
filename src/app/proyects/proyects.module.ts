@@ -8,12 +8,14 @@ import { DetailComponent } from "./pages/detail/detail.component";
 import { FormFilterComponent } from "./pages/components/form_filter/form-filter.component";
 import { ListComponent } from "./pages/list/list.component";
 import { ReactiveFormsModule } from "@angular/forms";
+import { CarouselDetailComponent } from "./pages/components/carousel_detail/carousel-detail.component";
 
 @NgModule({
   declarations: [
     DetailComponent,
     FormFilterComponent,
     ListComponent,
+    CarouselDetailComponent,
   ],
   imports: [
     CommonModule,

@@ -1,1 +1,22 @@
-<h2>detalles del proyecto</h2>
+<app-header title="Detalles del proyecto"></app-header>
+
+<section class="detail">
+  <app-carousel-detail></app-carousel-detail>
+
+  <h3>Nombre del proyecto</h3>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ut nulla a nostrum itaque neque modi, minus numquam nemo rerum amet repellendus. Labore eum exercitationem ducimus omnis alias saepe maxime impedit sint, et cupiditate similique, voluptatibus officia iste aspernatur officiis possimus minima dolores sapiente amet velit. Debitis quam temporibus mollitia odio nesciunt a ab sunt ducimus laudantium rem iste, saepe doloremque non suscipit sit ut nihil in eum officia explicabo. Iusto enim libero commodi asperiores ducimus culpa id animi deleniti, vel vero exercitationem incidunt neque quasi ipsum. Laboriosam, ea voluptate minima debitis in quaerat? Ipsum, iusto cum! Quisquam, ducimus esse.</p>
+  <h3>Tecnologias:</h3>
+
+  <div class="detail__container--tech">
+    <app-tech
+      *ngFor="let tech of techData"
+      [tech]="tech"
+    ></app-tech>
+  </div>
+
+  <div class="detail__container--buttons">
+    <button>Producción</button>
+    <button>Github</button>
+  </div>
+</section>
